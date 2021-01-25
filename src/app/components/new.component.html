@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+  <mat-form-field appearance="standard">
+    <mat-label>Add new Task</mat-label>
+    <input matInput formControlName="name">
+    <mat-icon matSuffix *ngIf="!form.valid" color="warn">assignment</mat-icon>
+    <mat-icon matSuffix *ngIf="form.valid">assignment_turned_in</mat-icon>
+    <mat-hint>Describe the new task</mat-hint>
+  </mat-form-field>
+</ng-container>
+<button mat-fab color="primary" *ngIf="form.valid" aria-label="Save" class="labs-save" (click)="save()">
+  <mat-icon>save</mat-icon>
+</button>

@@ -1,0 +1,9 @@
+<mat-list>
+  <mat-list-item *ngFor="let item of itemsServices.items$ | async">
+    <mat-checkbox [checked]="item.checked" data-test="item"><div class="labs-label">{{item.title}}</div></mat-checkbox>
+  </mat-list-item>
+</mat-list>
+
+<button mat-fab color="primary" aria-label="Add TODO" class="labs-add" (click)="createNew()" data-test="add">
+  <mat-icon>add</mat-icon>
+</button>
